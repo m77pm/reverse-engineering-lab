@@ -1,0 +1,44 @@
+{
+  "file": "phone_sample/sample_app.py",
+  "size_bytes": 547,
+  "sha256": "f03dbaf83c6327addab7247d7176677a1237dd48adbdbf0e17b383cfaa269b45",
+  "md5": "c2800a947cddd550d7510a354c7d2f6c",
+  "type": "Unknown / raw binary",
+  "entropy": 5.457,
+  "is_lab_sample": true,
+  "strings_count": 16,
+  "strings_sample": [
+    "    flag = 0",
+    "    flag = open(os.path.join(here, \"access.dat\"), \"rb\").read()[0]",
+    "    print(\"Access Denied - Normal User Mode\")",
+    "    print(\"Welcome Admin - All Permissions Granted\")",
+    " access.dat : 0x00 = ",
+    "# RE_LAB_SAMPLE_v1 - phone edition, pure Python, no compiler needed",
+    "#!/usr/bin/env python3",
+    ", 0x01 = Admin",
+    "MARKER = \"RE_LAB_SAMPLE_v1\"",
+    "else:",
+    "except Exception:",
+    "here = os.path.dirname(os.path.abspath(__file__))",
+    "if flag == 1:",
+    "import os, sys",
+    "print(f\"Marker: {MARKER}\")",
+    "try:"
+  ],
+  "urls_found": [],
+  "keyword_hits": {
+    "admin": [
+      "    print(\"Welcome Admin - All Permissions Granted\")",
+      ", 0x01 = Admin"
+    ],
+    "permission": [
+      "    print(\"Welcome Admin - All Permissions Granted\")"
+    ]
+  },
+  "next_steps": [
+    "Open in Ghidra: File > Import, then Analyze > Auto Analysis",
+    "Look for keyword_hits functions (e.g. is_admin / check / verify)",
+    "Set a breakpoint on the comparison, observe registers/flags (dynamic analysis)",
+    "Document the offset of any conditional jump before discussing patching theory"
+  ]
+}
